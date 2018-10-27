@@ -1,0 +1,11 @@
+<p>
+  {{recherche | lowercase }}
+</p>
+<label>Nom de la crypto</label>
+<input  [(ngModel)]="recherche">
+<button [disabled]="!valid" (click)="onClick()">Recherche</button>
+
+<div *ngFor = "let c of listeCrypto ">
+  <app-liste [coin]='c'></app-liste>
+</div>
+<app-liste></app-liste>
