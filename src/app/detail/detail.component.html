@@ -1,3 +1,13 @@
-<p>
-  Liste id : {{id}}
-</p>
+<h1>Details</h1>
+
+<div *ngIf="detailCrypto"> 
+        <p> Name:  {{cryptoDetails.name}}</p>
+        <p>   Rank:  {{cryptoDetails.rank}}</p>
+         <p> Id:  {{cryptoDetails.id}}</p> 
+        <p> Symbol:  {{cryptoDetails.symbol}}</p> 
+ </div>
+
+
+ <div *ngIf="detailCrypto.quotes"> 
+         {{cryptoDetails.quotes.USD.price}}
+ </div>

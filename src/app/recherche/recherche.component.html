@@ -6,6 +6,7 @@
 <button [disabled]="!valid" (click)="onClick()">Recherche</button>
 
 <div *ngFor = "let c of listeCrypto ">
+    <div *ngIf="c.name.indexOf (recherche) >= 0 || recherche==''" > 
   <app-liste [coin]='c'></app-liste>
 </div>
 <app-liste></app-liste>
